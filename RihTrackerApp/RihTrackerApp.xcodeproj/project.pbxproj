@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87B6AFB72B3B083A00AC71A1 /* RihTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B6AFB62B3B083A00AC71A1 /* RihTrackerApp.swift */; };
-		87B6AFB92B3B083A00AC71A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B6AFB82B3B083A00AC71A1 /* ContentView.swift */; };
-		87B6AFBB2B3B083C00AC71A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B6AFBA2B3B083C00AC71A1 /* Assets.xcassets */; };
-		87B6AFBE2B3B083C00AC71A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B6AFBD2B3B083C00AC71A1 /* Preview Assets.xcassets */; };
-		87B6AFC92B3B083C00AC71A1 /* RihTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B6AFC82B3B083C00AC71A1 /* RihTrackerTests.swift */; };
-		87B6AFD32B3B083C00AC71A1 /* RihTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B6AFD22B3B083C00AC71A1 /* RihTrackerUITests.swift */; };
-		87B6AFD52B3B083C00AC71A1 /* RihTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B6AFD42B3B083C00AC71A1 /* RihTrackerUITestsLaunchTests.swift */; };
+		876F35A12B3B0CA200CD6A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F35A02B3B0CA200CD6A0F /* AppDelegate.swift */; };
+		876F35A32B3B0CA200CD6A0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F35A22B3B0CA200CD6A0F /* ViewController.swift */; };
+		876F35A52B3B0CA300CD6A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 876F35A42B3B0CA300CD6A0F /* Assets.xcassets */; };
+		876F35A82B3B0CA300CD6A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876F35A62B3B0CA300CD6A0F /* Main.storyboard */; };
+		876F35B32B3B0CA300CD6A0F /* RihTrackerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F35B22B3B0CA300CD6A0F /* RihTrackerAppTests.swift */; };
+		876F35BD2B3B0CA300CD6A0F /* RihTrackerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F35BC2B3B0CA300CD6A0F /* RihTrackerAppUITests.swift */; };
+		876F35BF2B3B0CA300CD6A0F /* RihTrackerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F35BE2B3B0CA300CD6A0F /* RihTrackerAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87B6AFC52B3B083C00AC71A1 /* PBXContainerItemProxy */ = {
+		876F35AF2B3B0CA300CD6A0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87B6AFAB2B3B083A00AC71A1 /* Project object */;
+			containerPortal = 876F35952B3B0CA200CD6A0F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87B6AFB22B3B083A00AC71A1;
-			remoteInfo = RihTracker;
+			remoteGlobalIDString = 876F359C2B3B0CA200CD6A0F;
+			remoteInfo = RihTrackerApp;
 		};
-		87B6AFCF2B3B083C00AC71A1 /* PBXContainerItemProxy */ = {
+		876F35B92B3B0CA300CD6A0F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87B6AFAB2B3B083A00AC71A1 /* Project object */;
+			containerPortal = 876F35952B3B0CA200CD6A0F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87B6AFB22B3B083A00AC71A1;
-			remoteInfo = RihTracker;
+			remoteGlobalIDString = 876F359C2B3B0CA200CD6A0F;
+			remoteInfo = RihTrackerApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87B6AFB32B3B083A00AC71A1 /* RihTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RihTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		87B6AFB62B3B083A00AC71A1 /* RihTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerApp.swift; sourceTree = "<group>"; };
-		87B6AFB82B3B083A00AC71A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		87B6AFBA2B3B083C00AC71A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		87B6AFBD2B3B083C00AC71A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		87B6AFBF2B3B083C00AC71A1 /* RihTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RihTracker.entitlements; sourceTree = "<group>"; };
-		87B6AFC42B3B083C00AC71A1 /* RihTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RihTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87B6AFC82B3B083C00AC71A1 /* RihTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerTests.swift; sourceTree = "<group>"; };
-		87B6AFCE2B3B083C00AC71A1 /* RihTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RihTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87B6AFD22B3B083C00AC71A1 /* RihTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerUITests.swift; sourceTree = "<group>"; };
-		87B6AFD42B3B083C00AC71A1 /* RihTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		876F359D2B3B0CA200CD6A0F /* RihTrackerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RihTrackerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		876F35A02B3B0CA200CD6A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		876F35A22B3B0CA200CD6A0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		876F35A42B3B0CA300CD6A0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		876F35A72B3B0CA300CD6A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		876F35A92B3B0CA300CD6A0F /* RihTrackerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RihTrackerApp.entitlements; sourceTree = "<group>"; };
+		876F35AE2B3B0CA300CD6A0F /* RihTrackerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RihTrackerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		876F35B22B3B0CA300CD6A0F /* RihTrackerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerAppTests.swift; sourceTree = "<group>"; };
+		876F35B82B3B0CA300CD6A0F /* RihTrackerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RihTrackerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		876F35BC2B3B0CA300CD6A0F /* RihTrackerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerAppUITests.swift; sourceTree = "<group>"; };
+		876F35BE2B3B0CA300CD6A0F /* RihTrackerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RihTrackerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87B6AFB02B3B083A00AC71A1 /* Frameworks */ = {
+		876F359A2B3B0CA200CD6A0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87B6AFC12B3B083C00AC71A1 /* Frameworks */ = {
+		876F35AB2B3B0CA300CD6A0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87B6AFCB2B3B083C00AC71A1 /* Frameworks */ = {
+		876F35B52B3B0CA300CD6A0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,143 +72,135 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87B6AFAA2B3B083A00AC71A1 = {
+		876F35942B3B0CA200CD6A0F = {
 			isa = PBXGroup;
 			children = (
-				87B6AFB52B3B083A00AC71A1 /* RihTracker */,
-				87B6AFC72B3B083C00AC71A1 /* RihTrackerTests */,
-				87B6AFD12B3B083C00AC71A1 /* RihTrackerUITests */,
-				87B6AFB42B3B083A00AC71A1 /* Products */,
+				876F359F2B3B0CA200CD6A0F /* RihTrackerApp */,
+				876F35B12B3B0CA300CD6A0F /* RihTrackerAppTests */,
+				876F35BB2B3B0CA300CD6A0F /* RihTrackerAppUITests */,
+				876F359E2B3B0CA200CD6A0F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		87B6AFB42B3B083A00AC71A1 /* Products */ = {
+		876F359E2B3B0CA200CD6A0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87B6AFB32B3B083A00AC71A1 /* RihTracker.app */,
-				87B6AFC42B3B083C00AC71A1 /* RihTrackerTests.xctest */,
-				87B6AFCE2B3B083C00AC71A1 /* RihTrackerUITests.xctest */,
+				876F359D2B3B0CA200CD6A0F /* RihTrackerApp.app */,
+				876F35AE2B3B0CA300CD6A0F /* RihTrackerAppTests.xctest */,
+				876F35B82B3B0CA300CD6A0F /* RihTrackerAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87B6AFB52B3B083A00AC71A1 /* RihTracker */ = {
+		876F359F2B3B0CA200CD6A0F /* RihTrackerApp */ = {
 			isa = PBXGroup;
 			children = (
-				87B6AFB62B3B083A00AC71A1 /* RihTrackerApp.swift */,
-				87B6AFB82B3B083A00AC71A1 /* ContentView.swift */,
-				87B6AFBA2B3B083C00AC71A1 /* Assets.xcassets */,
-				87B6AFBF2B3B083C00AC71A1 /* RihTracker.entitlements */,
-				87B6AFBC2B3B083C00AC71A1 /* Preview Content */,
+				876F35A02B3B0CA200CD6A0F /* AppDelegate.swift */,
+				876F35A22B3B0CA200CD6A0F /* ViewController.swift */,
+				876F35A42B3B0CA300CD6A0F /* Assets.xcassets */,
+				876F35A62B3B0CA300CD6A0F /* Main.storyboard */,
+				876F35A92B3B0CA300CD6A0F /* RihTrackerApp.entitlements */,
 			);
-			path = RihTracker;
+			path = RihTrackerApp;
 			sourceTree = "<group>";
 		};
-		87B6AFBC2B3B083C00AC71A1 /* Preview Content */ = {
+		876F35B12B3B0CA300CD6A0F /* RihTrackerAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				87B6AFBD2B3B083C00AC71A1 /* Preview Assets.xcassets */,
+				876F35B22B3B0CA300CD6A0F /* RihTrackerAppTests.swift */,
 			);
-			path = "Preview Content";
+			path = RihTrackerAppTests;
 			sourceTree = "<group>";
 		};
-		87B6AFC72B3B083C00AC71A1 /* RihTrackerTests */ = {
+		876F35BB2B3B0CA300CD6A0F /* RihTrackerAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				87B6AFC82B3B083C00AC71A1 /* RihTrackerTests.swift */,
+				876F35BC2B3B0CA300CD6A0F /* RihTrackerAppUITests.swift */,
+				876F35BE2B3B0CA300CD6A0F /* RihTrackerAppUITestsLaunchTests.swift */,
 			);
-			path = RihTrackerTests;
-			sourceTree = "<group>";
-		};
-		87B6AFD12B3B083C00AC71A1 /* RihTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				87B6AFD22B3B083C00AC71A1 /* RihTrackerUITests.swift */,
-				87B6AFD42B3B083C00AC71A1 /* RihTrackerUITestsLaunchTests.swift */,
-			);
-			path = RihTrackerUITests;
+			path = RihTrackerAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87B6AFB22B3B083A00AC71A1 /* RihTracker */ = {
+		876F359C2B3B0CA200CD6A0F /* RihTrackerApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87B6AFD82B3B083C00AC71A1 /* Build configuration list for PBXNativeTarget "RihTracker" */;
+			buildConfigurationList = 876F35C22B3B0CA300CD6A0F /* Build configuration list for PBXNativeTarget "RihTrackerApp" */;
 			buildPhases = (
-				87B6AFAF2B3B083A00AC71A1 /* Sources */,
-				87B6AFB02B3B083A00AC71A1 /* Frameworks */,
-				87B6AFB12B3B083A00AC71A1 /* Resources */,
+				876F35992B3B0CA200CD6A0F /* Sources */,
+				876F359A2B3B0CA200CD6A0F /* Frameworks */,
+				876F359B2B3B0CA200CD6A0F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RihTracker;
-			productName = RihTracker;
-			productReference = 87B6AFB32B3B083A00AC71A1 /* RihTracker.app */;
+			name = RihTrackerApp;
+			productName = RihTrackerApp;
+			productReference = 876F359D2B3B0CA200CD6A0F /* RihTrackerApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		87B6AFC32B3B083C00AC71A1 /* RihTrackerTests */ = {
+		876F35AD2B3B0CA300CD6A0F /* RihTrackerAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87B6AFDB2B3B083C00AC71A1 /* Build configuration list for PBXNativeTarget "RihTrackerTests" */;
+			buildConfigurationList = 876F35C52B3B0CA300CD6A0F /* Build configuration list for PBXNativeTarget "RihTrackerAppTests" */;
 			buildPhases = (
-				87B6AFC02B3B083C00AC71A1 /* Sources */,
-				87B6AFC12B3B083C00AC71A1 /* Frameworks */,
-				87B6AFC22B3B083C00AC71A1 /* Resources */,
+				876F35AA2B3B0CA300CD6A0F /* Sources */,
+				876F35AB2B3B0CA300CD6A0F /* Frameworks */,
+				876F35AC2B3B0CA300CD6A0F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87B6AFC62B3B083C00AC71A1 /* PBXTargetDependency */,
+				876F35B02B3B0CA300CD6A0F /* PBXTargetDependency */,
 			);
-			name = RihTrackerTests;
-			productName = RihTrackerTests;
-			productReference = 87B6AFC42B3B083C00AC71A1 /* RihTrackerTests.xctest */;
+			name = RihTrackerAppTests;
+			productName = RihTrackerAppTests;
+			productReference = 876F35AE2B3B0CA300CD6A0F /* RihTrackerAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		87B6AFCD2B3B083C00AC71A1 /* RihTrackerUITests */ = {
+		876F35B72B3B0CA300CD6A0F /* RihTrackerAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87B6AFDE2B3B083C00AC71A1 /* Build configuration list for PBXNativeTarget "RihTrackerUITests" */;
+			buildConfigurationList = 876F35C82B3B0CA300CD6A0F /* Build configuration list for PBXNativeTarget "RihTrackerAppUITests" */;
 			buildPhases = (
-				87B6AFCA2B3B083C00AC71A1 /* Sources */,
-				87B6AFCB2B3B083C00AC71A1 /* Frameworks */,
-				87B6AFCC2B3B083C00AC71A1 /* Resources */,
+				876F35B42B3B0CA300CD6A0F /* Sources */,
+				876F35B52B3B0CA300CD6A0F /* Frameworks */,
+				876F35B62B3B0CA300CD6A0F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87B6AFD02B3B083C00AC71A1 /* PBXTargetDependency */,
+				876F35BA2B3B0CA300CD6A0F /* PBXTargetDependency */,
 			);
-			name = RihTrackerUITests;
-			productName = RihTrackerUITests;
-			productReference = 87B6AFCE2B3B083C00AC71A1 /* RihTrackerUITests.xctest */;
+			name = RihTrackerAppUITests;
+			productName = RihTrackerAppUITests;
+			productReference = 876F35B82B3B0CA300CD6A0F /* RihTrackerAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		87B6AFAB2B3B083A00AC71A1 /* Project object */ = {
+		876F35952B3B0CA200CD6A0F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					87B6AFB22B3B083A00AC71A1 = {
+					876F359C2B3B0CA200CD6A0F = {
 						CreatedOnToolsVersion = 15.1;
 					};
-					87B6AFC32B3B083C00AC71A1 = {
+					876F35AD2B3B0CA300CD6A0F = {
 						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 87B6AFB22B3B083A00AC71A1;
+						TestTargetID = 876F359C2B3B0CA200CD6A0F;
 					};
-					87B6AFCD2B3B083C00AC71A1 = {
+					876F35B72B3B0CA300CD6A0F = {
 						CreatedOnToolsVersion = 15.1;
-						TestTargetID = 87B6AFB22B3B083A00AC71A1;
+						TestTargetID = 876F359C2B3B0CA200CD6A0F;
 					};
 				};
 			};
-			buildConfigurationList = 87B6AFAE2B3B083A00AC71A1 /* Build configuration list for PBXProject "RihTracker" */;
+			buildConfigurationList = 876F35982B3B0CA200CD6A0F /* Build configuration list for PBXProject "RihTrackerApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,36 +208,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 87B6AFAA2B3B083A00AC71A1;
-			productRefGroup = 87B6AFB42B3B083A00AC71A1 /* Products */;
+			mainGroup = 876F35942B3B0CA200CD6A0F;
+			productRefGroup = 876F359E2B3B0CA200CD6A0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87B6AFB22B3B083A00AC71A1 /* RihTracker */,
-				87B6AFC32B3B083C00AC71A1 /* RihTrackerTests */,
-				87B6AFCD2B3B083C00AC71A1 /* RihTrackerUITests */,
+				876F359C2B3B0CA200CD6A0F /* RihTrackerApp */,
+				876F35AD2B3B0CA300CD6A0F /* RihTrackerAppTests */,
+				876F35B72B3B0CA300CD6A0F /* RihTrackerAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		87B6AFB12B3B083A00AC71A1 /* Resources */ = {
+		876F359B2B3B0CA200CD6A0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B6AFBE2B3B083C00AC71A1 /* Preview Assets.xcassets in Resources */,
-				87B6AFBB2B3B083C00AC71A1 /* Assets.xcassets in Resources */,
+				876F35A52B3B0CA300CD6A0F /* Assets.xcassets in Resources */,
+				876F35A82B3B0CA300CD6A0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87B6AFC22B3B083C00AC71A1 /* Resources */ = {
+		876F35AC2B3B0CA300CD6A0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87B6AFCC2B3B083C00AC71A1 /* Resources */ = {
+		876F35B62B3B0CA300CD6A0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,49 +247,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		87B6AFAF2B3B083A00AC71A1 /* Sources */ = {
+		876F35992B3B0CA200CD6A0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B6AFB92B3B083A00AC71A1 /* ContentView.swift in Sources */,
-				87B6AFB72B3B083A00AC71A1 /* RihTrackerApp.swift in Sources */,
+				876F35A32B3B0CA200CD6A0F /* ViewController.swift in Sources */,
+				876F35A12B3B0CA200CD6A0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87B6AFC02B3B083C00AC71A1 /* Sources */ = {
+		876F35AA2B3B0CA300CD6A0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B6AFC92B3B083C00AC71A1 /* RihTrackerTests.swift in Sources */,
+				876F35B32B3B0CA300CD6A0F /* RihTrackerAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87B6AFCA2B3B083C00AC71A1 /* Sources */ = {
+		876F35B42B3B0CA300CD6A0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87B6AFD32B3B083C00AC71A1 /* RihTrackerUITests.swift in Sources */,
-				87B6AFD52B3B083C00AC71A1 /* RihTrackerUITestsLaunchTests.swift in Sources */,
+				876F35BD2B3B0CA300CD6A0F /* RihTrackerAppUITests.swift in Sources */,
+				876F35BF2B3B0CA300CD6A0F /* RihTrackerAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87B6AFC62B3B083C00AC71A1 /* PBXTargetDependency */ = {
+		876F35B02B3B0CA300CD6A0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87B6AFB22B3B083A00AC71A1 /* RihTracker */;
-			targetProxy = 87B6AFC52B3B083C00AC71A1 /* PBXContainerItemProxy */;
+			target = 876F359C2B3B0CA200CD6A0F /* RihTrackerApp */;
+			targetProxy = 876F35AF2B3B0CA300CD6A0F /* PBXContainerItemProxy */;
 		};
-		87B6AFD02B3B083C00AC71A1 /* PBXTargetDependency */ = {
+		876F35BA2B3B0CA300CD6A0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87B6AFB22B3B083A00AC71A1 /* RihTracker */;
-			targetProxy = 87B6AFCF2B3B083C00AC71A1 /* PBXContainerItemProxy */;
+			target = 876F359C2B3B0CA200CD6A0F /* RihTrackerApp */;
+			targetProxy = 876F35B92B3B0CA300CD6A0F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		876F35A62B3B0CA300CD6A0F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				876F35A72B3B0CA300CD6A0F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		87B6AFD62B3B083C00AC71A1 /* Debug */ = {
+		876F35C02B3B0CA300CD6A0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -360,7 +363,7 @@
 			};
 			name = Debug;
 		};
-		87B6AFD72B3B083C00AC71A1 /* Release */ = {
+		876F35C12B3B0CA300CD6A0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -415,57 +418,57 @@
 			};
 			name = Release;
 		};
-		87B6AFD92B3B083C00AC71A1 /* Debug */ = {
+		876F35C32B3B0CA300CD6A0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = RihTracker/RihTracker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RihTrackerApp/RihTrackerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RihTracker/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		87B6AFDA2B3B083C00AC71A1 /* Release */ = {
+		876F35C42B3B0CA300CD6A0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = RihTracker/RihTracker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RihTrackerApp/RihTrackerApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RihTracker/Preview Content\"";
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTracker";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		87B6AFDC2B3B083C00AC71A1 /* Debug */ = {
+		876F35C62B3B0CA300CD6A0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -475,15 +478,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RihTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RihTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RihTrackerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RihTrackerApp";
 			};
 			name = Debug;
 		};
-		87B6AFDD2B3B083C00AC71A1 /* Release */ = {
+		876F35C72B3B0CA300CD6A0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -493,15 +496,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RihTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RihTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RihTrackerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RihTrackerApp";
 			};
 			name = Release;
 		};
-		87B6AFDF2B3B083C00AC71A1 /* Debug */ = {
+		876F35C92B3B0CA300CD6A0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -509,15 +512,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = RihTracker;
+				TEST_TARGET_NAME = RihTrackerApp;
 			};
 			name = Debug;
 		};
-		87B6AFE02B3B083C00AC71A1 /* Release */ = {
+		876F35CA2B3B0CA300CD6A0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -525,54 +528,54 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "-23.RihTrackerAppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = RihTracker;
+				TEST_TARGET_NAME = RihTrackerApp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87B6AFAE2B3B083A00AC71A1 /* Build configuration list for PBXProject "RihTracker" */ = {
+		876F35982B3B0CA200CD6A0F /* Build configuration list for PBXProject "RihTrackerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87B6AFD62B3B083C00AC71A1 /* Debug */,
-				87B6AFD72B3B083C00AC71A1 /* Release */,
+				876F35C02B3B0CA300CD6A0F /* Debug */,
+				876F35C12B3B0CA300CD6A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87B6AFD82B3B083C00AC71A1 /* Build configuration list for PBXNativeTarget "RihTracker" */ = {
+		876F35C22B3B0CA300CD6A0F /* Build configuration list for PBXNativeTarget "RihTrackerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87B6AFD92B3B083C00AC71A1 /* Debug */,
-				87B6AFDA2B3B083C00AC71A1 /* Release */,
+				876F35C32B3B0CA300CD6A0F /* Debug */,
+				876F35C42B3B0CA300CD6A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87B6AFDB2B3B083C00AC71A1 /* Build configuration list for PBXNativeTarget "RihTrackerTests" */ = {
+		876F35C52B3B0CA300CD6A0F /* Build configuration list for PBXNativeTarget "RihTrackerAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87B6AFDC2B3B083C00AC71A1 /* Debug */,
-				87B6AFDD2B3B083C00AC71A1 /* Release */,
+				876F35C62B3B0CA300CD6A0F /* Debug */,
+				876F35C72B3B0CA300CD6A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87B6AFDE2B3B083C00AC71A1 /* Build configuration list for PBXNativeTarget "RihTrackerUITests" */ = {
+		876F35C82B3B0CA300CD6A0F /* Build configuration list for PBXNativeTarget "RihTrackerAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87B6AFDF2B3B083C00AC71A1 /* Debug */,
-				87B6AFE02B3B083C00AC71A1 /* Release */,
+				876F35C92B3B0CA300CD6A0F /* Debug */,
+				876F35CA2B3B0CA300CD6A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 87B6AFAB2B3B083A00AC71A1 /* Project object */;
+	rootObject = 876F35952B3B0CA200CD6A0F /* Project object */;
 }

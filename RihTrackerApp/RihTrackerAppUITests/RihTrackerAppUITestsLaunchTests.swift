@@ -1,13 +1,13 @@
 //
-//  RihTrackerUITestsLaunchTests.swift
-//  RihTrackerUITests
+//  RihTrackerAppUITestsLaunchTests.swift
+//  RihTrackerAppUITests
 //
 //  Created by Лагутин Фёдор on 26.12.2023.
 //
 
 import XCTest
 
-final class RihTrackerUITestsLaunchTests: XCTestCase {
+final class RihTrackerAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
