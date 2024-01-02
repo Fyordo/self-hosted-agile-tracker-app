@@ -1,9 +1,9 @@
 import Board from "@/pages/Board.vue";
 import Dashboard from "@/pages/Dashboard.vue";
-import Profile from "@/pages/Profile.vue";
-import ProfileEdit from "@/pages/ProfileEdit.vue";
+import Profile from "@/pages/Profile/Profile.vue";
+import ProfileEdit from "@/pages/Profile/ProfileEdit.vue";
 import Reports from "@/pages/Reports.vue";
-import Tracker from "@/pages/Tracker.vue";
+import TrackerPage from "@/pages/TrackerPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     },
     {
         path: '/tracker',
-        component: Tracker,
+        component: TrackerPage,
         name: "TrackerPage"
     },
     {

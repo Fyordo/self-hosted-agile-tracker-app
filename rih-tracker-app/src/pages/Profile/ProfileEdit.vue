@@ -5,7 +5,7 @@
         />
         <div class="profile-info">
             <div class="profile-input">
-                <h2 class="input-margin">Имя пользователя: </h2>
+                <h2 class="input-margin">Имя пользователя:</h2>
                 <UIInput
                 class="input-box"
                 v-model="profileInfo.username"
@@ -13,7 +13,7 @@
             </div>
 
             <div class="profile-input">
-                <h2 class="input-margin">Логин:  </h2>
+                <h2 class="input-margin">Логин:</h2>
                 <UIInput
                 class="input-box"
                 v-model="profileInfo.login"

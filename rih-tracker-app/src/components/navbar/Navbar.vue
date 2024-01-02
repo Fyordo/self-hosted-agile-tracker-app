@@ -35,7 +35,7 @@ nav {
     background-color: #55B78E;
     height: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     color: white;
 }
