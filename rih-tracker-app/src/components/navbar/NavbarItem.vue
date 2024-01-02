@@ -1,7 +1,9 @@
 <template>
-  <div class="navbar-item">
-    <RouterLink :to="{name: this.link}">{{ this.title }}</RouterLink>
-  </div>
+    <RouterLink :to="{name: this.link}">
+        <div class="navbar-item">
+            {{ this.title }}
+        </div>
+    </RouterLink>
 </template>
 
 <script>
