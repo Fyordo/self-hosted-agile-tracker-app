@@ -1,4 +1,8 @@
+import Board from "@/pages/Board.vue";
 import Dashboard from "@/pages/Dashboard.vue";
+import Profile from "@/pages/Profile.vue";
+import Reports from "@/pages/Reports.vue";
+import Tracker from "@/pages/Tracker.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
@@ -9,22 +13,22 @@ const routes = [
     },
     {
         path: '/tracker',
-        component: Dashboard,
+        component: Tracker,
         name: "TrackerPage"
     },
     {
         path: '/board',
-        component: Dashboard,
+        component: Board,
         name: "BoardPage"
     },
     {
         path: '/reports',
-        component: Dashboard,
+        component: Reports,
         name: "ReportsPage"
     },
     {
         path: '/profile',
-        component: Dashboard,
+        component: Profile,
         name: "ProfilePage"
     },
 ]

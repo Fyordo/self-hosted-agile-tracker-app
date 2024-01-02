@@ -5,12 +5,10 @@
 
 <script>
 import Navbar from "@/components/navbar/Navbar.vue";
-import Dashboard from "@/pages/Dashboard.vue";
 
 export default {
   components: {
-    Navbar,
-    Dashboard
+    Navbar
   },
   data () {
     return {
