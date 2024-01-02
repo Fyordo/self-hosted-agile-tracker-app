@@ -24,6 +24,6 @@ input {
 }
 
 input:hover{
-    background-color: #2fb47487;
+    background-color: #55B78E87;
 }
 </style>

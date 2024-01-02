@@ -4,7 +4,7 @@
         :src="this.profileInfo.avatar"
         />
         <div class="profile-info">
-            <h1>Имя пользователя: {{this.profileInfo.username}}</h1>
+            <h1>{{this.profileInfo.username}}@{{this.profileInfo.id}}</h1>
             <h2>Логин: {{this.profileInfo.login}}</h2>
             <div class="profile-buttons-container">
                 <UIButton v-on:click="toEditPage" :title="'Редактировать'"/>
@@ -30,6 +30,7 @@ export default {
             await axios
                 .get(appConfig.apiPath + "/api/profile/2")
                 .then(response => {
+                    this.profileInfo.id = response.data.id;
                     this.profileInfo.username = response.data.username;
                     this.profileInfo.login = response.data.login;
                     this.profileInfo.avatar = response.data.avatar;
@@ -47,6 +48,7 @@ export default {
     data () {
         return {
             profileInfo: {
+                username: 0,
                 username: "Загрузка...",
                 login: "Загрузка...",
                 avatar: "https://priutnekrasovka.ru/public/images/no-avatar.png",
@@ -68,5 +70,9 @@ export default {
 .profile-buttons-container {
     display: flex;
     margin: 20px;
+}
+
+h1 {
+    font-size: 50px;
 }
 </style>

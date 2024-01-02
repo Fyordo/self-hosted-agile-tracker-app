@@ -17,7 +17,7 @@ export default {
 <style scoped>
 button {
     font-family: 'Nunito', sans-serif;
-    background-color: #2fb474;
+    background-color: #55B78E;
     border-radius: 15px;
     padding: 10px;
     margin-left: 10px;
@@ -28,6 +28,6 @@ button {
 }
 
 button:hover{
-    background-color: #2fb47487;
+    background-color: #55B78E87;
 }
 </style>
