@@ -1,16 +1,13 @@
 <template>
     <div class="profile-container">
         <UIImage
-        :src="'https://sun9-12.userapi.com/impf/58P21qM2oQkJKFDNKnOyPx-XzxCxukBGdm4Z9Q/_HWSZmu8_kQ.jpg?size=853x1280&quality=95&sign=76c495e3c1cfcc293adf5f9f696096c2&type=album'"
+        :src="this.profileInfo.avatar"
         />
         <div class="profile-info">
-            <h1>Имя пользователя: Fyor Lando🎄</h1>
-            <h2>Логин: login</h2>
-            <h2>Telegram: @federiton_san</h2>
-            <h2>ВК: http://vk.com/federiton_san</h2>
-            <h2>Discord: @federiton_san</h2>
-            <div class="buttons-container">
-                <UIButton :title="'Редактировать'"/>
+            <h1>Имя пользователя: {{this.profileInfo.username}}</h1>
+            <h2>Логин: {{this.profileInfo.login}}</h2>
+            <div class="profile-buttons-container">
+                <UIButton v-on:click="toEditPage" :title="'Редактировать'"/>
                 <UIButton :title="'Выйти'"/>
             </div>
         </div>
@@ -20,15 +17,46 @@
 <script>
 import UIImage from "@/components/UI/UIImage.vue";
 import UIButton from "@/components/UI/UIButton.vue";
-    export default {
-        components: {
-            UIImage,
-            UIButton
+import appConfig from "@/config/config.js";
+import axios from 'axios';
+import router from "@/router/router.js";
+
+export default {
+    created () {
+        this.loadInfo();
+    },
+    methods: {
+        async loadInfo() {
+            await axios
+                .get(appConfig.apiPath + "/api/profile/2")
+                .then(response => {
+                    this.profileInfo.username = response.data.username;
+                    this.profileInfo.login = response.data.login;
+                    this.profileInfo.avatar = response.data.avatar;
+                });
+        },
+
+        toEditPage: function (event){
+            router.push("/profile/edit");
         }
-    }
+    },
+    components: {
+        UIImage,
+        UIButton
+    },
+    data () {
+        return {
+            profileInfo: {
+                username: "Загрузка...",
+                login: "Загрузка...",
+                avatar: "https://priutnekrasovka.ru/public/images/no-avatar.png",
+            }
+        }
+    },
+}
 </script>
 
-<style scoped>
+<style>
 .profile-container {
     display: flex;
 }
@@ -37,7 +65,7 @@ import UIButton from "@/components/UI/UIButton.vue";
     padding-top: 50px;
 }
 
-.buttons-container {
+.profile-buttons-container {
     display: flex;
     margin: 20px;
 }

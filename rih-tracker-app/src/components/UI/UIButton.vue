@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 button {
     font-family: 'Nunito', sans-serif;
     background-color: #2fb474;

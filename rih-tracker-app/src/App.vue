@@ -5,17 +5,15 @@
 
 <script>
 import Navbar from "@/components/navbar/Navbar.vue";
+import axios from 'axios';
 
 export default {
+  created () {
+    //axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+  },
   components: {
     Navbar
-  },
-  data () {
-    return {
-        
-    }
-  },
-  
+  }
 }
 </script>
 
