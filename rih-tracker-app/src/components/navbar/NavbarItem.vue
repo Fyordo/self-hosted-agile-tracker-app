@@ -1,21 +1,24 @@
 <template>
   <div class="navbar-item">
-    <a href="{{ this.link }}">{{ this.title }}</a>
+    <RouterLink :to="{name: this.link}">{{ this.title }}</RouterLink>
   </div>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 export default {
-  props: {
-    title: {
-      type: String,
-      required: true
+    props: {
+        title: {
+            type: String,
+            required: true
+        },
+        link: {
+            type: String,
+            required: true
+        }
     },
-    link: {
-      type: String,
-      required: true
-    }
-  },
+    components: { RouterLink }
 }
 </script>
 

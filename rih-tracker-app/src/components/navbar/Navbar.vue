@@ -4,8 +4,7 @@
         v-for="item in items"
         :title="item.title"
         :link="item.link"
-        >
-        </NavbarItem>
+        />
     </nav>
 </template>
 
@@ -19,11 +18,11 @@ export default {
   data () {
     return {
         items: [
-            {title: "Дашборд", link: "#"},
-            {title: "Трекер", link: "#"},
-            {title: "Доска", link: "#"},
-            {title: "Отчёты", link: "#"},
-            {title: "Профиль", link: "#"},
+            {title: "Дашборд", link: "DashboardPage"},
+            {title: "Трекер", link: "TrackerPage"},
+            {title: "Доска", link: "BoardPage"},
+            {title: "Отчёты", link: "ReportsPage"},
+            {title: "Профиль", link: "ProfilePage"},
         ]
     }
   },

@@ -1,15 +1,16 @@
 <template>
-  <Navbar>
-      
-  </Navbar>
+  <Navbar/>
+  <RouterView/>
 </template>
 
 <script>
 import Navbar from "@/components/navbar/Navbar.vue";
+import Dashboard from "@/pages/Dashboard.vue";
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Dashboard
   },
   data () {
     return {

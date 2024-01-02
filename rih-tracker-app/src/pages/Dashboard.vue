@@ -1,6 +1,6 @@
 <template>
     <div>
-        DASHBOARD!!!
+        DASHBOARD!!!        
     </div>
 </template>
 
