@@ -45,7 +45,7 @@ export default {
                 .then(response => {
                     this.profileInfo.username = response.data.username;
                     this.profileInfo.login = response.data.login;
-                    this.profileInfo.avatar = response.data.avatar;
+                    this.profileInfo.avatar = response.data.avatar ?? "https://priutnekrasovka.ru/public/images/no-avatar.png";
                 });
         },
         

@@ -31,7 +31,7 @@ export default {
                 this.profileInfo.id = response.data.id;
                 this.profileInfo.username = response.data.username + "@";
                 this.profileInfo.login = response.data.login;
-                this.profileInfo.avatar = response.data.avatar;
+                this.profileInfo.avatar = response.data.avatar ?? "https://priutnekrasovka.ru/public/images/no-avatar.png";
             });
         },
 
