@@ -1,3 +1,4 @@
+import AuthPage from "@/pages/Auth/AuthPage.vue";
 import Board from "@/pages/Board.vue";
 import Dashboard from "@/pages/Dashboard.vue";
 import Profile from "@/pages/Profile/Profile.vue";
@@ -30,12 +31,17 @@ const routes = [
     {
         path: '/profile',
         component: Profile,
-        name: "ProfilePage"
+        name: 'ProfilePage'
     },
     {
         path: '/profile/edit',
         component: ProfileEdit,
         name: "ProfileEditPage"
+    },
+    {
+        path: '/login',
+        component: AuthPage,
+        name: "AuthPage"
     }
 ]
 

@@ -1,15 +1,34 @@
 <template>
-  <Navbar/>
+  <div v-if="authorized">
+    <Navbar/>
+  </div>
   <RouterView/>
 </template>
 
 <script>
 import Navbar from "@/components/navbar/Navbar.vue";
 import axios from 'axios';
+import router from "@/router/router.js";
 
 export default {
+  mounted() {
+    // Проверяем наличие JWT в localStorage
+    const jwtToken = localStorage.getItem('jwt');
+
+    // Если JWT есть, отрисовываем компонент Navbar
+    if (jwtToken) {
+      this.authorized = true;
+    }
+    else{
+      router.push("/login");
+    }
+  },
+  data () {
+    return {
+        authorized: false, // Флаг для отрисовки компонента Navbar
+    };
+  },
   created () {
-    //axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
   },
   components: {
     Navbar

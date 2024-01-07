@@ -32,8 +32,7 @@
 import UIImage from "@/components/UI/UIImage.vue";
 import UIButton from "@/components/UI/UIButton.vue";
 import UIInput from "@/components/UI/UIInput.vue";
-import appConfig from "@/config/config.js";
-import axios from 'axios';
+import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
 
 export default {
@@ -42,22 +41,23 @@ export default {
     },
     methods: {
         async loadInfo() {
-            await axios
-                .get(appConfig.apiPath + "/api/profile/2")
+                axiosAgregator.sendGet("/api/profile/" + localStorage.getItem("userId"))
                 .then(response => {
                     this.profileInfo.username = response.data.username;
                     this.profileInfo.login = response.data.login;
                     this.profileInfo.avatar = response.data.avatar;
                 });
         },
+        
         async saveInfo() {
-            await axios
-                .put(appConfig.apiPath + "/api/profile/2", {
+            await axiosAgregator.sendGet(
+                "/api/profile/" + localStorage.getItem("userId"),
+                {
                     username: this.profileInfo.username,
                     login: this.profileInfo.login,
                     avatar: this.profileInfo.avatar,
-                })
-                .then();
+                }
+            )
         },
 
         toProfilePage: function (event){
