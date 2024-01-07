@@ -1,4 +1,5 @@
 import AuthPage from "@/pages/Auth/AuthPage.vue";
+import RegisterPage from "@/pages/Auth/RegisterPage.vue";
 import Board from "@/pages/Board.vue";
 import Dashboard from "@/pages/Dashboard.vue";
 import Profile from "@/pages/Profile/Profile.vue";
@@ -42,6 +43,11 @@ const routes = [
         path: '/login',
         component: AuthPage,
         name: "AuthPage"
+    },
+    {
+        path: '/register',
+        component: RegisterPage,
+        name: "RegisterPage"
     }
 ]
 

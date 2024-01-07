@@ -1,27 +1,36 @@
 <template>
     <img :src="'src/images/RihTrackerLogo.png'">
-    <div class="login-form">
-        <div class="auth-input">
-            <h2 class="input-margin">Логин:</h2>
+    <div class="register-form">
+
+        <div class="register-input">
+            <h2 class="input-margin">Имя пользователя:</h2>
             <UIInput
-            type="text"
             class="input-box"
-            v-model="loginForm.login"
+            v-model="registerForm.username"
             />
         </div>
 
-        <div class="auth-input">
+        <div class="register-input">
+            <h2 class="input-margin">Почта:</h2>
+            <UIInput
+            type="text"
+            class="input-box"
+            v-model="registerForm.login"
+            />
+        </div>
+
+        <div class="register-input">
             <h2 class="input-margin">Пароль:</h2>
             <UIInput
             type="password"
             class="input-box"
-            v-model="loginForm.password"
+            v-model="registerForm.password"
             />
         </div>
 
         <div>
-            <UIButton @click="login" :title="'Авторизоваться'"/>
-            <UIButton @click="toRegisterPage" :title="'Зарегистрироваться'"/>
+            <UIButton @click="toLoginPage" :title="'Уже есть аккаунт'"/>
+            <UIButton @click="register" :title="'Зарегистрироваться'"/>
         </div>
     </div>
 </template>
@@ -33,26 +42,21 @@ import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
 export default {
     methods: {
-        toRegisterPage: function (event){
-            router.push("/register");
+        toLoginPage: function (event){
+            router.push("/login");
         },
 
-        async login(){
+        async register(){
             try {
-                const response = await axiosAgregator.sendPost("/api/auth/login", {
-                    login: this.loginForm.login,
-                    password: this.loginForm.password,
-                });
+                const response = await axiosAgregator.sendPost("/api/auth/register", this.registerForm);
 
-                if (response.status === 200 && response.data.token) {
-                    // Если статус 200 и есть поле token, записываем его в localStorage
-                    localStorage.setItem('jwt', response.data.token);
-                    localStorage.setItem('userId', response.data.id);
-                    router.push("/profile");
+                if (response.status === 200 && response.data) {
+                    router.push("/login");
                 } else {
                     alert('Сервер тупит');
                 }
             } catch (error) {
+                console.log(error);
             // Обработка ошибок
                 if (error.response && error.response.status === 400) {
                     // Если приходит статус 403
@@ -65,8 +69,9 @@ export default {
     },
     data () {
         return {
-            loginForm: {
+            registerForm: {
                 login: "",
+                username: "",
                 password: "",
             }
         }
@@ -80,7 +85,7 @@ export default {
 </script>
 
 <style scoped>
-.login-form {
+.register-form {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -89,7 +94,7 @@ export default {
     flex-wrap: wrap;
 }
 
-.auth-input {
+.register-input {
     display: flex;
 }
 
