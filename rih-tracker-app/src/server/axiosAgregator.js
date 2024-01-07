@@ -34,7 +34,7 @@ export default {
                 }
             );
     },
-    sendPut: async function (path) {
+    sendPut: async function (path, data) {
         var headers = {}
         if (localStorage.getItem("jwt") !== null){
             headers = {
@@ -42,7 +42,7 @@ export default {
             };
         }
         return await axios
-            .post(
+            .put(
                 apiPath + path,
                 data,
                 {

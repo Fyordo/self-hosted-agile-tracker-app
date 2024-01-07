@@ -20,6 +20,14 @@
                 />
             </div>
 
+            <div class="profile-input">
+                <h2 class="input-margin">Ссылка на аватар:</h2>
+                <UIInput
+                class="input-box"
+                v-model="profileInfo.avatar"
+                />
+            </div>
+
             <div class="profile-buttons-container">
                 <UIButton @click="saveProfile" :title="'Сохранить'"/>
                 <UIButton @click="toProfilePage" :title="'Отмена'"/>
@@ -50,13 +58,9 @@ export default {
         },
         
         async saveInfo() {
-            await axiosAgregator.sendGet(
+            await axiosAgregator.sendPut(
                 "/api/profile/" + localStorage.getItem("userId"),
-                {
-                    username: this.profileInfo.username,
-                    login: this.profileInfo.login,
-                    avatar: this.profileInfo.avatar,
-                }
+                this.profileInfo
             )
         },
 
