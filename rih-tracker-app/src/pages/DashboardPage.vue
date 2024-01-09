@@ -3,7 +3,7 @@
         <div class="row-widget-container">
             <TimeWidget
             :text="'Сегодня'"
-            :time="{hours:this.todayTime.hours, minutes:this.todayTime.minutes, seconds:this.todayTime.seconds}"
+            :time="this.todayTime"
             @click="toReportsPage(null, null)"
             />
             <CurrentTaskWidget
