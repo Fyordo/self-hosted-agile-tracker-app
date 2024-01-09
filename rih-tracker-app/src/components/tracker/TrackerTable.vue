@@ -110,6 +110,7 @@
   
   .time-entries {
     margin-top: 10px;
+    margin-bottom: 800px;
   }
   
   .time-entry {

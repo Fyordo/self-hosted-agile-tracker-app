@@ -1,9 +1,9 @@
 import AuthPage from "@/pages/Auth/AuthPage.vue";
 import RegisterPage from "@/pages/Auth/RegisterPage.vue";
 import Board from "@/pages/Board.vue";
-import Dashboard from "@/pages/Dashboard.vue";
-import Profile from "@/pages/Profile/Profile.vue";
-import ProfileEdit from "@/pages/Profile/ProfileEdit.vue";
+import DashboardPage from "@/pages/DashboardPage.vue";
+import ProfilePage from "@/pages/Profile/ProfilePage.vue";
+import ProfileEditPage from "@/pages/Profile/ProfileEditPage.vue";
 import Reports from "@/pages/Reports.vue";
 import TrackerPage from "@/pages/TrackerPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
@@ -11,7 +11,7 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
     {
         path: '/dashboard',
-        component: Dashboard,
+        component: DashboardPage,
         name: "DashboardPage"
     },
     {
@@ -31,12 +31,12 @@ const routes = [
     },
     {
         path: '/profile',
-        component: Profile,
+        component: ProfilePage,
         name: 'ProfilePage'
     },
     {
         path: '/profile/edit',
-        component: ProfileEdit,
+        component: ProfileEditPage,
         name: "ProfileEditPage"
     },
     {
