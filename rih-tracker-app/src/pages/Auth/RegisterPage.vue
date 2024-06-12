@@ -3,7 +3,7 @@
     <div class="register-form">
 
         <div class="register-input">
-            <h2 class="input-margin">Имя пользователя:</h2>
+            <h2 class="input-margin">Username:</h2>
             <UIInput
             class="input-box"
             v-model="registerForm.username"
@@ -11,7 +11,7 @@
         </div>
 
         <div class="register-input">
-            <h2 class="input-margin">Почта:</h2>
+            <h2 class="input-margin">Mail:</h2>
             <UIInput
             type="text"
             class="input-box"
@@ -20,7 +20,7 @@
         </div>
 
         <div class="register-input">
-            <h2 class="input-margin">Пароль:</h2>
+            <h2 class="input-margin">Password:</h2>
             <UIInput
             type="password"
             class="input-box"
@@ -29,8 +29,8 @@
         </div>
 
         <div>
-            <UIButton @click="toLoginPage" :title="'Уже есть аккаунт'"/>
-            <UIButton @click="register" :title="'Зарегистрироваться'"/>
+            <UIButton @click="toLoginPage" :title="'Have an account?'"/>
+            <UIButton @click="register" :title="'Confirm'"/>
         </div>
     </div>
 </template>
@@ -104,6 +104,8 @@ export default {
 
 .register-input {
     display: flex;
+    width: 40%;
+    justify-content: space-between;
 }
 
 .input-margin {
@@ -111,7 +113,9 @@ export default {
 }
 
 .input-box{
-    margin-top: 4px;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 img {

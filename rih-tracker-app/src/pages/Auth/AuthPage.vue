@@ -2,24 +2,26 @@
     <h1 class="centered-h1">Self-Hosted Agile Tracker</h1>
     <div class="login-form">
         <div class="auth-input">
-            <h2 class="input-margin">Логин:</h2>
+            <h2 class="input-margin">Login:</h2>
             <UIInput
             type="text"
+            class="input-box"
             v-model="loginForm.login"
             />
         </div>
 
         <div class="auth-input">
-            <h2 class="input-margin">Пароль:</h2>
+            <h2 class="input-margin">Password:</h2>
             <UIInput
             type="password"
+            class="input-box"
             v-model="loginForm.password"
             />
         </div>
 
         <div>
-            <UIButton @click="login" :title="'Авторизоваться'"/>
-            <UIButton @click="toRegisterPage" :title="'Зарегистрироваться'"/>
+            <UIButton @click="login" :title="'Sign In'"/>
+            <UIButton @click="toRegisterPage" :title="'Sign Up'"/>
         </div>
     </div>
 </template>
@@ -97,11 +99,18 @@ export default {
 
 .auth-input {
     display: flex;
+    width: 40%;
     justify-content: space-between;
 }
 
 .input-margin {
     margin-right: 10px;
+}
+
+.input-box{
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 img {
