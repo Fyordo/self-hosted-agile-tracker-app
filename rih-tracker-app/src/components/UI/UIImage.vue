@@ -1,28 +1,28 @@
 <template>
-    <img :src="this.src"/>
+    <img :src="this.src" />
 </template>
 
 <script>
-    export default {
+export default {
     props: {
         src: {
             type: String,
-            required: true
-        }
+            required: true,
+        },
     },
-        
-    }
+};
 </script>
 
 <style scoped>
 img {
     border-radius: 25px;
+    backgroud-color: #111111;
     width: 500px;
     height: 500px;
     margin: 50px;
-    border: 0.4rem solid #e2aa0e;
+    border: 0;
 }
 img:hover {
-    border: 0.4rem solid #bf941e;
+    backgroud-color: #0000002a;
 }
 </style>

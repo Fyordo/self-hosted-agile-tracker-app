@@ -1,5 +1,5 @@
 <template>
-    <RouterLink :to="{name: this.link}">
+    <RouterLink :to="{ name: this.link }">
         <div class="navbar-item">
             {{ this.title }}
         </div>
@@ -7,37 +7,38 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
 
 export default {
     props: {
         title: {
             type: String,
-            required: true
+            required: true,
         },
         link: {
             type: String,
-            required: true
-        }
+            required: true,
+        },
     },
-    components: { RouterLink }
-}
+    components: { RouterLink },
+};
 </script>
 
 <style>
 a {
     text-decoration: none;
-    color: white;
+    color: #05386b;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 30px;
 }
 
-.navbar-item{
+.navbar-item {
     border-radius: 5px;
     padding: 10px;
+    transition-duration: 0.2s;
 }
 
-.navbar-item:hover{
-    background-color: #0000002a;
+.navbar-item:hover {
+    color: #5cdb95;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="week-container">
         <div v-for="(day, index) in days" :key="index" class="day-column">
-            <div class="column-header">
+            <div class="column-header" :style="calculateToday(day.today)">
                 {{ day.date }}
                 <br>
                 {{ day.dayName }}
@@ -31,6 +31,11 @@
       this.initializeDays();
     },
     methods: {
+      calculateToday(isToday){
+        if (isToday){
+          return "color: #4271d5";
+        }
+      },
       initializeDays() {
         const startDate = new Date();
         startDate.setDate(startDate.getDate() - startDate.getDay() + 1);
@@ -40,7 +45,8 @@
           const dayName = this.getDayName(date.getDay());
           const timeEntries = this.generateTimeEntries(date);
           const totalHours = this.calculateTotalHours(timeEntries);
-        this.days.push({ date: this.formatDate(date), dayName, timeEntries, totalHours });
+          const today = date.getDay() === new Date().getDay();
+          this.days.push({ date: this.formatDate(date), dayName, timeEntries, totalHours, today });
         }
       },
       getDayName(dayIndex) {
@@ -56,17 +62,19 @@
         // В данном примере я создаю случайные time-entry для иллюстрации
         const entries = [];
         for (let i = 0; i < 5; i++) {
+          var rand = Math.floor(Math.random() * 2);
           const startTime = new Date(date);
           startTime.setHours(8 + i, 0, 0);
           const endTime = new Date(startTime);
           endTime.setHours(9 + i, 0, 0);
-  
-          entries.push({
-            timeStart: startTime,
-            timeEnd: endTime,
-            description: `Описание ${i + 1}`,
-            task: { title: `Задача ${i + 1}` },
-          });
+          if (rand === 1){
+            entries.push({
+              timeStart: startTime,
+              timeEnd: endTime,
+              description: `Описание ${i + 1}`,
+              task: { title: `Задача ${i + 1}` },
+            });
+          }
         }
         return entries;
       },
@@ -118,7 +126,7 @@
   }
   
   .entry-rectangle {
-  background: linear-gradient(to bottom, #55B78E, #367459);
+  background: #55B78E;
   color: #fff;
   padding: 5px;
   border-radius: 5px;

@@ -5,32 +5,29 @@
         />
         <div class="profile-info">
             <div class="profile-input">
-                <h2 class="input-margin">Имя пользователя:</h2>
+                <h2 class="input-margin">Username:</h2>
                 <UIInput
-                class="input-box"
                 v-model="profileInfo.username"
                 />
             </div>
 
             <div class="profile-input">
-                <h2 class="input-margin">Логин:</h2>
+                <h2 class="input-margin">Login:</h2>
                 <UIInput
-                class="input-box"
                 v-model="profileInfo.login"
                 />
             </div>
 
             <div class="profile-input">
-                <h2 class="input-margin">Ссылка на аватар:</h2>
+                <h2 class="input-margin">Avatar URL:</h2>
                 <UIInput
-                class="input-box"
                 v-model="profileInfo.avatar"
                 />
             </div>
 
             <div class="profile-buttons-container">
-                <UIButton @click="saveProfile" :title="'Сохранить'"/>
-                <UIButton @click="toProfilePage" :title="'Отмена'"/>
+                <UIButton @click="saveProfile" :title="'Save Profile'"/>
+                <UIButton @click="toProfilePage" :title="'Cancel'"/>
             </div>
         </div>
     </div>
@@ -82,8 +79,8 @@ export default {
     data () {
         return {
             profileInfo: {
-                username: "Загрузка...",
-                login: "Загрузка...",
+                username: "Loading...",
+                login: "Loading...",
                 avatar: "https://priutnekrasovka.ru/public/images/no-avatar.png",
             }
         }
@@ -92,12 +89,14 @@ export default {
 </script>
 
 <style scoped>
-.profile-input {
+.profile-buttons-container{
     display: flex;
+    justify-content: space-evenly;
 }
 
-.input-box{
-    margin-top: 1%;
+.profile-input {
+    display: flex;
+    justify-content: space-between;
 }
 
 .input-margin{
