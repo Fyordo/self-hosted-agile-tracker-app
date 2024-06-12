@@ -1,5 +1,5 @@
 <template>
-    <img :src="'src/images/RihTrackerLogo.png'">
+    <h1 class="centered-h1">Self-Hosted Agile Tracker</h1>
     <div class="register-form">
 
         <div class="register-input">
@@ -85,6 +85,14 @@ export default {
 </script>
 
 <style scoped>
+.centered-h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .register-form {
     margin-top: 50px;
     display: flex;

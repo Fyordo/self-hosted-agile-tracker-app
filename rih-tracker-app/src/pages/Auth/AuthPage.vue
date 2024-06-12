@@ -1,11 +1,10 @@
 <template>
-    <img :src="'src/images/RihTrackerLogo.png'">
+    <h1 class="centered-h1">Self-Hosted Agile Tracker</h1>
     <div class="login-form">
         <div class="auth-input">
             <h2 class="input-margin">Логин:</h2>
             <UIInput
             type="text"
-            class="input-box"
             v-model="loginForm.login"
             />
         </div>
@@ -14,7 +13,6 @@
             <h2 class="input-margin">Пароль:</h2>
             <UIInput
             type="password"
-            class="input-box"
             v-model="loginForm.password"
             />
         </div>
@@ -80,6 +78,14 @@ export default {
 </script>
 
 <style scoped>
+.centered-h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .login-form {
     margin-top: 50px;
     display: flex;
@@ -91,14 +97,11 @@ export default {
 
 .auth-input {
     display: flex;
+    justify-content: space-between;
 }
 
 .input-margin {
     margin-right: 10px;
-}
-
-.input-box{
-    margin-top: 4px;
 }
 
 img {
