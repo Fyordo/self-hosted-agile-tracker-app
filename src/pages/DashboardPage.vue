@@ -2,8 +2,13 @@
     <div>
         <div class="row-widget-container">
             <TimeWidget
-                :text="'Сегодня'"
+                :text="'Today'"
                 :time="this.todayTime"
+                @click="toReportsPage(null, null)"
+            />
+            <CountTasksWidget
+                :text="'Count My Tasks'"
+                :countTasks="this.countTasks"
                 @click="toReportsPage(null, null)"
             />
             <CurrentTaskWidget
@@ -11,11 +16,16 @@
                 :trackedTask="this.currentTask.trackedTask"
             />
         </div>
+        <div class="row-widget-container">
+            <MonthGraph/>
+        </div>
     </div>
 </template>
 
 <script>
 import TimeWidget from "@/components/dashboard/TimeWidget.vue";
+import CountTasksWidget from "@/components/dashboard/CountTasksWidget.vue";
+import MonthGraph from "@/components/dashboard/MonthGraph.vue";
 import CurrentTaskWidget from "@/components/dashboard/CurrentTaskWidget.vue";
 import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
@@ -27,6 +37,7 @@ export default {
                 minutes: 0,
                 seconds: 0,
             },
+            countTasks: 12,
             currentTask: {
                 project: {
                     id: 1,
@@ -55,6 +66,8 @@ export default {
     components: {
         CurrentTaskWidget,
         TimeWidget,
+        MonthGraph,
+        CountTasksWidget
     },
 };
 </script>
