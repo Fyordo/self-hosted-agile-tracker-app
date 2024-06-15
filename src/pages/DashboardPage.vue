@@ -37,17 +37,17 @@ export default {
                 minutes: 0,
                 seconds: 0,
             },
-            countTasks: 12,
+            countTasks: 0,
             currentTask: {
                 project: {
                     id: 1,
-                    title: "Загрузка...",
+                    title: "Loading...",
                 },
                 trackedTask: {
                     timeStart: "2024-01-01T00:00:00",
                     task: {
                         id: 1,
-                        title: "Загрузка...",
+                        title: "Loading...",
                     },
                 },
             },

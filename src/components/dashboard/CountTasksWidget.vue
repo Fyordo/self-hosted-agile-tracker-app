@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <div class="count-tasks-widget">
-            <div class="count-tasks-widget-text">
-                <b>{{ this.text }}</b>
-            </div>
-            <div class="count-tasks-widget-time">
-                {{ this.countTasks }}
-            </div>
+    <div class="count-tasks-widget">
+        <div class="count-tasks-widget-text">
+            <b>{{ this.text }}</b>
+        </div>
+        <div class="count-tasks-widget-time">
+            {{ this.countTasks }}
         </div>
     </div>
 </template>
@@ -32,7 +30,7 @@ export default {
 <style scoped>
 .count-tasks-widget {
     background-color: rgb(230, 230, 230);
-    width: 300px;
+    width: 20%;
     height: 125px;
     border-radius: 10px;
 }
@@ -46,8 +44,8 @@ export default {
     padding-top: 10px;
     padding-left: 10px;
     font-size: 250%;
-    color: rgb(230, 230, 230);
-    background-color: #e2aa0e;
+    color: white;
+    background-color: #05386b;
 }
 
 .count-tasks-widget-time {

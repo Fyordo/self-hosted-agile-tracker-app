@@ -1,26 +1,24 @@
 <template>
-    <div>
-        <div class="current-task">
+    <div class="current-task">
+        <div
+            class="current-task-title"
+            @click="toTaskPage(this.trackedTask.task.id)"
+        >
+            <b>{{ this.trackedTask.task.title }}</b>
+        </div>
+        <div class="current-task-info">
             <div
-                class="current-task-title"
-                @click="toTaskPage(this.trackedTask.task.id)"
+                class="current-task-project"
+                @click="toProjectPage(this.project.id)"
             >
-                <b>{{ this.trackedTask.task.title }}</b>
+                Project: {{ this.project.title }}
             </div>
-            <div class="current-task-info">
-                <div
-                    class="current-task-project"
-                    @click="toProjectPage(this.project.id)"
-                >
-                    Проект: {{ this.project.title }}
-                </div>
-                <div
-                    class="current-task-info-separator"
-                    @click="toTrackerPage"
-                />
-                <div class="current-task-time" @click="toTrackerPage">
-                    {{ this.getTrackedTimeAsString() }}
-                </div>
+            <div
+                class="current-task-info-separator"
+                @click="toTrackerPage"
+            />
+            <div class="current-task-time" @click="toTrackerPage">
+                {{ this.getTrackedTimeAsString() }}
             </div>
         </div>
     </div>
@@ -122,7 +120,7 @@ export default {
 <style scoped>
 .current-task {
     background-color: rgb(230, 230, 230);
-    width: auto;
+    width: 50%;
     height: 125px;
     border-radius: 10px;
     margin-left: 10px;
@@ -141,7 +139,7 @@ export default {
     justify-content: center;
     font-size: 250%;
     color: rgb(230, 230, 230);
-    background-color: #4271d5;
+    background-color: #05386b;
 }
 
 .current-task-title:hover {
@@ -153,7 +151,7 @@ export default {
     justify-content: center;
     font-size: 250%;
     color: rgb(230, 230, 230);
-    background-color: #213768;
+    background-color: #05386b;
 }
 
 .current-task-info {
@@ -176,7 +174,7 @@ export default {
 }
 
 .current-task-project:hover {
-    color: #4271d5;
+    color: white;
 }
 
 .current-task-time {

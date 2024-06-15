@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <div class="time-widget">
-            <div class="time-widget-text">
-                <b>{{ this.text }}</b>
-            </div>
-            <div class="time-widget-time">
-                {{ this.getTrackedTimeAsString() }}
-            </div>
+    <div class="time-widget">
+        <div class="time-widget-text">
+            <b>{{ this.text }}</b>
+        </div>
+        <div class="time-widget-time">
+            {{ this.getTrackedTimeAsString() }}
         </div>
     </div>
 </template>
@@ -48,7 +46,7 @@ export default {
 <style scoped>
 .time-widget {
     background-color: rgb(230, 230, 230);
-    width: 300px;
+    width: 20%;
     height: 125px;
     border-radius: 10px;
 }
@@ -62,8 +60,8 @@ export default {
     padding-top: 10px;
     padding-left: 10px;
     font-size: 250%;
-    color: rgb(230, 230, 230);
-    background-color: #e2aa0e;
+    color: white;
+    background-color: #05386b;
 }
 
 .time-widget-time {
