@@ -15,6 +15,7 @@
 <script>
 import UIImage from "@/components/UI/UIImage.vue";
 import UIButton from "@/components/UI/UIButton.vue";
+import UISelect from "@/components/UI/UISelect.vue";
 import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
 
@@ -34,6 +35,20 @@ export default {
                         response.data.avatar ??
                         "https://priutnekrasovka.ru/public/images/no-avatar.png";
                 });
+
+            axiosAgregator
+                .sendGet("/api/project")
+                .then((response) => {
+                    let data = response.data.data;
+                    this.selectOptions = data.map((elem) => {
+                        return {
+                            value: elem.id,
+                            text: elem.title
+                        };
+                    });
+
+                    this.selectedOption = this.selectOptions[1].value;
+                });
         },
 
         toEditPage: function (event) {
@@ -49,9 +64,12 @@ export default {
     components: {
         UIImage,
         UIButton,
+        UISelect
     },
     data() {
         return {
+            selectOptions: [],
+            selectedOption: "",
             profileInfo: {
                 username: 0,
                 username: "Loading...",
@@ -76,5 +94,9 @@ export default {
 .profile-buttons-container {
     display: flex;
     margin: 20px;
+}
+
+.project-container {
+    display: flex;
 }
 </style>

@@ -33,7 +33,7 @@
     methods: {
       calculateToday(isToday){
         if (isToday){
-          return "color: #4271d5";
+          return "color: #5cdb95";
         }
       },
       initializeDays() {
@@ -71,8 +71,8 @@
             entries.push({
               timeStart: startTime,
               timeEnd: endTime,
-              description: `Описание ${i + 1}`,
-              task: { title: `Задача ${i + 1}` },
+              description: `Description ${i + 1}`,
+              task: { title: `Task ${i + 1}` },
             });
           }
         }
@@ -126,11 +126,12 @@
   }
   
   .entry-rectangle {
-  background: #55B78E;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  position: relative;
+    background: #5cdb95;
+    border: 0;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    position: relative;
   }
   
   .entry-title {

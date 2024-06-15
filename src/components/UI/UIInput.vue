@@ -19,7 +19,7 @@ input {
     font-family: "Nunito", sans-serif;
     background-color: #5cdb95;
     border-radius: 15px;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     font-size: 20px;
     color: #05386b;
     border: 0;
