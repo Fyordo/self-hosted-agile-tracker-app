@@ -6,7 +6,7 @@
                 <br>
                 {{ day.dayName }}
                 <br>
-                {{ day.totalHours }} ч
+                {{ day.totalHours }} h
             </div>
             <div class="time-entries">
                 <div v-for="(entry, entryIndex) in day.timeEntries" :key="entryIndex" class="time-entry">
@@ -16,15 +16,42 @@
                 </div>
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
   </template>
   
   <script>
+import axiosAgregator from "@/server/axiosAgregator.js";
   export default {
     data() {
       return {
         days: [],
+        timeEntries: []
       };
     },
     mounted() {
@@ -37,46 +64,42 @@
         }
       },
       initializeDays() {
-        const startDate = new Date();
-        startDate.setDate(startDate.getDate() - startDate.getDay() + 1);
-        for (let i = 0; i < 7; i++) {
-          const date = new Date(startDate);
-          date.setDate(startDate.getDate() + i);
-          const dayName = this.getDayName(date.getDay());
-          const timeEntries = this.generateTimeEntries(date);
-          const totalHours = this.calculateTotalHours(timeEntries);
-          const today = date.getDay() === new Date().getDay();
-          this.days.push({ date: this.formatDate(date), dayName, timeEntries, totalHours, today });
-        }
+
+        axiosAgregator.sendGet("/api/time-entry").then((response) => {
+          let entriesArray = response.data.data;
+          const timeEntriesAll = entriesArray.map((elem) => {
+            return {
+              timeStart: new Date(elem.timeStart),
+              timeEnd: new Date(elem.timeEnd),
+              description: elem.description,
+              task: elem.task,
+            };
+          });
+
+          const startDate = new Date();
+          startDate.setDate(startDate.getDate() - (startDate.getDay()+7) + 1);
+          for (let i = 0; i < 7; i++) {
+            const date = new Date(startDate);
+            date.setDate(startDate.getDate() + i);
+            const dayName = this.getDayName(date.getDay());
+            const timeEntries = timeEntriesAll.filter((elem) => {
+              return (new Date(elem.timeStart)).getDate() == date.getDate();
+            });
+            console.log(timeEntries)
+            const totalHours = this.calculateTotalHours(timeEntries);
+            const today = date.getDay() === new Date().getDay();
+            this.days.push({ date: this.formatDate(date), dayName, timeEntries, totalHours, today });
+          }
+        })
+        
       },
       getDayName(dayIndex) {
-        const daysOfWeek = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+        const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fr', 'Sat'];
         return daysOfWeek[dayIndex];
       },
       formatDate(date) {
         const options = { weekday: 'long', day: 'numeric' };
-        return date.toLocaleDateString('ru-RU', options);
-      },
-      generateTimeEntries(date) {
-        // Здесь вы можете создать список time-entry для текущего дня
-        // В данном примере я создаю случайные time-entry для иллюстрации
-        const entries = [];
-        for (let i = 0; i < 5; i++) {
-          var rand = Math.floor(Math.random() * 2);
-          const startTime = new Date(date);
-          startTime.setHours(8 + i, 0, 0);
-          const endTime = new Date(startTime);
-          endTime.setHours(9 + i, 0, 0);
-          if (rand === 1){
-            entries.push({
-              timeStart: startTime,
-              timeEnd: endTime,
-              description: `Description ${i + 1}`,
-              task: { title: `Task ${i + 1}` },
-            });
-          }
-        }
-        return entries;
+        return date.toLocaleDateString('en-EN', options);
       },
       calculateRectangleStyle(entry) {
         // Пример логики: просто для иллюстрации
@@ -109,6 +132,7 @@
   .day-column {
     flex: 1;
     padding: 10px;
+    max-width: 13%;
   }
   
   .column-header {
@@ -137,10 +161,18 @@
   .entry-title {
     font-size: 16px;
     font-weight: bold;
+    max-height: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   .entry-description {
     font-size: 12px;
+    max-height: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   
   </style>

@@ -35,7 +35,9 @@ import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
 export default {
     created () {
-        axiosAgregator.sendGet("/api/dashboard").then((response) => {
+        let projectId = localStorage.getItem("currentProjectId");
+        axiosAgregator.sendGet("/api/dashboard/"+projectId).then((response) => {
+            console.log(response.data);
             this.todayTime = response.data.todayTime;
             this.countTasks = response.data.countTasks;
             this.currentTask = response.data.currentTask;
