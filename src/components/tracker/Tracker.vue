@@ -1,11 +1,12 @@
 <template>
     <div class="tracker">
-       <div class="ticket-title">{{ this.timeEntry.task.title }}</div>
-       <UIInput
-       class="ticket-description"
-       v-model="this.timeEntry.description"
-       />
-       <div class="timer">{{ this.getTrackedTimeAsString() }}</div>
+        <b>Current task:</b>
+        <div class="ticket-title"><i>{{ this.timeEntry.task.title }}</i></div>
+        <UIInput
+        class="ticket-description"
+        v-model="this.timeEntry.description"
+        />
+        <div class="timer">{{ this.getTrackedTimeAsString() }}</div>
     </div>
 </template>
 
@@ -80,10 +81,10 @@ export default {
             timeEntry: {
                 timeStart: "2024-01-03T00:01:00",
                 timeEnd: Date.now().toString(),
-                description: "Очень длинное time-entry с названием тикета аааа бляяя",
+                description: "Loading...",
                 task: {
                     id: 0,
-                    title: "Реализовать дашборд"
+                    title: "Loading task..."
                 }
             }
         }
@@ -104,6 +105,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-radius: 15px;
 }
 .ticket-description {
     margin-right: 20px;

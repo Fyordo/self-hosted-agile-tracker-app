@@ -19,6 +19,10 @@
         <div class="row-widget-container">
             <MonthGraph/>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </template>
 
@@ -30,6 +34,13 @@ import CurrentTaskWidget from "@/components/dashboard/CurrentTaskWidget.vue";
 import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
 export default {
+    created () {
+        axiosAgregator.sendGet("/api/dashboard").then((response) => {
+            this.todayTime = response.data.todayTime;
+            this.countTasks = response.data.countTasks;
+            this.currentTask = response.data.currentTask;
+        })
+    },
     data() {
         return {
             todayTime: {
@@ -51,6 +62,7 @@ export default {
                     },
                 },
             },
+            graph: []
         };
     },
     methods: {

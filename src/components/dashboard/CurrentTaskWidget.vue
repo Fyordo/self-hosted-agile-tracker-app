@@ -43,6 +43,13 @@ export default {
             router.push("/tracker");
         },
         convertDataToTrackedTime() {
+            if (this.trackedTask === null){
+                this.trackedTime = {
+                    hours: 0,
+                    minutes: 0,
+                    seconds: 0,
+                };
+            }
             var startTime = new Date(this.trackedTask.timeStart);
             var endTime = new Date();
 
