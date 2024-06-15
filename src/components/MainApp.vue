@@ -12,7 +12,7 @@
 
 <script>
 import Navbar from "@/components/navbar/Navbar.vue";
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/footer/Footer.vue";
 import router from "@/router/router.js";
 
 export default {

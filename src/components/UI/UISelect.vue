@@ -16,10 +16,6 @@
       value: {
         type: [String, Number],
         required: false,
-      },
-      label: {
-        type: String,
-        default: '',
       }
     },
     data() {
@@ -41,7 +37,6 @@
   </script>
   
   <style scoped>
-
   select {
     padding: 0.5rem;
     border: 0;
