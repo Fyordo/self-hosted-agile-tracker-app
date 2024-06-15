@@ -6,21 +6,21 @@
         <div class="profile-info">
             <div class="profile-input">
                 <h2 class="input-margin">Username:</h2>
-                <UIInput
+                <UIInput style="width: 500px;"
                 v-model="profileInfo.username"
                 />
             </div>
 
             <div class="profile-input">
                 <h2 class="input-margin">Login:</h2>
-                <UIInput
+                <UIInput style="width: 500px;"
                 v-model="profileInfo.login"
                 />
             </div>
 
             <div class="profile-input">
                 <h2 class="input-margin">Avatar URL:</h2>
-                <UIInput
+                <UIInput style="width: 500px;"
                 v-model="profileInfo.avatar"
                 />
             </div>
@@ -96,7 +96,15 @@ export default {
 
 .profile-input {
     display: flex;
+    margin-bottom: 10px;
     justify-content: space-between;
+}
+
+.profile-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .input-margin{

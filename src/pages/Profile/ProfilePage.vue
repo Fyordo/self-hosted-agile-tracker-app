@@ -84,19 +84,18 @@ export default {
 <style>
 .profile-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-info {
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-buttons-container {
     display: flex;
     margin: 20px;
-}
-
-.project-container {
-    display: flex;
 }
 </style>
