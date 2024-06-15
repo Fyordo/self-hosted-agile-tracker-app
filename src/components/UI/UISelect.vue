@@ -25,7 +25,7 @@
     },
     methods: {
       emitChange() {
-        this.$emit('input', this.selectedValue);
+        this.$emit('selected', this.selectedValue);
       },
     },
     watch: {
