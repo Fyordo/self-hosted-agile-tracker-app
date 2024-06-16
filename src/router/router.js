@@ -1,6 +1,6 @@
 import AuthPage from "@/pages/Auth/AuthPage.vue";
 import RegisterPage from "@/pages/Auth/RegisterPage.vue";
-import Board from "@/pages/Board.vue";
+import BoardPage from "@/pages/BoardPage.vue";
 import DashboardPage from "@/pages/DashboardPage.vue";
 import ProfilePage from "@/pages/Profile/ProfilePage.vue";
 import ProfileEditPage from "@/pages/Profile/ProfileEditPage.vue";
@@ -21,7 +21,7 @@ const routes = [
     },
     {
         path: '/board',
-        component: Board,
+        component: BoardPage,
         name: "BoardPage"
     },
     {
