@@ -1,4 +1,4 @@
-# self-hosted-agile-tracker-app
+# Self-Hosted Agile-Tracker (Frontend)
 
 ### About
 
