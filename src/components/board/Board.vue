@@ -8,35 +8,14 @@
   import Column from './Column.vue';
   
   export default {
+    props: {
+        columns: Array
+    },
     components: {
       Column
     },
     data() {
       return {
-        columns: [
-          {
-            id: 1,
-            name: 'To Do',
-            tasks: [
-              { id: 1, name: 'Task 1' },
-              { id: 2, name: 'Task 2' }
-            ]
-          },
-          {
-            id: 2,
-            name: 'In Progress',
-            tasks: [
-              { id: 3, name: 'Task 3' }
-            ]
-          },
-          {
-            id: 3,
-            name: 'Done',
-            tasks: [
-              { id: 4, name: 'Task 4' }
-            ]
-          }
-        ]
       }
     }
   }

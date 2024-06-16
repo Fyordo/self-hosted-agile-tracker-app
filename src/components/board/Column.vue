@@ -25,7 +25,7 @@
   
   <style scoped>
   .column {
-    background-color: #e0e0e0;
+    background-color: #EDF5E1;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
