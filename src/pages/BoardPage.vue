@@ -17,6 +17,7 @@
 <script>
 import Column from '@/components/board/Column.vue';
 import axiosAgregator from "@/server/axiosAgregator.js";
+
 export default {
     created () {
         this.loadColumns();

@@ -5,9 +5,11 @@
       <div class="task-type" :style="{ backgroundColor: task.taskType.color }">{{ task.taskType.title }}</div>
     </div>
     <div class="task-deadline">Deadline: {{ (new Date(task.deadline)).toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' }) }}</div>
-    <div class="task-responsible">
-      <img :src="task.maintainer.avatar" alt="Avatar" class="avatar" />
-      <span>{{ task.maintainer.username }}</span>
+    <div class="bottom-part">
+      <div class="task-responsible">
+        <img :src="task.maintainer.avatar" alt="Avatar" class="avatar" />
+        <span>{{ task.maintainer.username }}</span>
+      </div>
       <UIButton 
           :title="'Start'" 
           @click="startTimeEntry()"
@@ -44,6 +46,12 @@ export default {
 </script>
 
 <style scoped>
+.bottom-part{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .task {
   background-color: #05386B;
   color: white;
@@ -80,7 +88,6 @@ export default {
 }
 
 .task-responsible {
-  margin-top: 10px;
   display: flex;
   align-items: center;
 }

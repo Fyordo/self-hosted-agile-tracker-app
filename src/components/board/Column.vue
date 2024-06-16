@@ -13,7 +13,7 @@
   
   export default {
     components: {
-      Task
+      Task,
     },
     props: {
       column: {
