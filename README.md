@@ -17,3 +17,5 @@ npm i
 ```sh
 npm run dev
 ```
+
+#### Backend repo: https://github.com/Fyordo/self-hosted-agile-tracker-back
