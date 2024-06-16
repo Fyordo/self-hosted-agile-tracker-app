@@ -4,9 +4,9 @@
 
 This is a web application that integrates the functionalities of a Kanban board and time tracking in a single, convenient solution. It can be installed on your local server and customized to meet your specific needs.
 
-### Project Setup
+### Project Setup (Local)
 
-1. Install all dependensies
+1. Install all dependencies
 
 ```sh
 npm i
