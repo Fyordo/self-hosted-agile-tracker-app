@@ -1,7 +1,10 @@
 <template>
-    <Board
-    :columns="this.columns"
-    />
+    <div class="board">
+      <Column v-for="column in columns"
+      :key="column.id"
+      :column="column"
+      />
+    </div>
     <br>
     <br>
     <br>
@@ -12,7 +15,7 @@
 </template>
 
 <script>
-import Board from '@/components/board/Board.vue';
+import Column from '@/components/board/Column.vue';
 import axiosAgregator from "@/server/axiosAgregator.js";
 export default {
     created () {
@@ -26,44 +29,22 @@ export default {
     methods: {
         loadColumns(){
             let projectId = localStorage.getItem("currentProjectId");
-            new Promise((resolve, reject) => {
-                axiosAgregator.sendGet("/api/project/"+projectId+"/columns").then((response) => {
-                    let responseData = response.data.data;
-                    let columns = responseData.sort((a, b) => a.id - b.id);
-
-                    resolve(columns);
-                })
-                .catch(error => {
-                    reject(error);
-                })
-            }).then((columns => {
-                this.columns = columns;
-                for (let i = 0; i < this.columns.length; i++){
-                    let column = this.columns[i];
-                    new Promise((res, rej) => {
-                        axiosAgregator.sendGet("/api/column/"+column.id+"/tasks")
-                        .then((response) => {
-                            res(response.data.data);
-                            
-                        })
-                        .catch(error => {
-                            rej(error);
-                        })
-                    }).then((tasksOfColumn) => {
-                        this.columns[i].tasks = tasksOfColumn;
-                    })
-                }
-                
-            }));
-            
+            axiosAgregator.sendGet("/api/project/"+projectId+"/columns").then((response) => {
+                let responseData = response.data.data;
+                this.columns = responseData.sort((a, b) => a.id - b.id);
+            })
         }
     },
     components: {
-        Board
+        Column
     }
 }
 </script>
 
 <style>
-
+.board {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
 </style>
