@@ -105,11 +105,11 @@ export default {
     props: {
         project: {
             type: Object,
-            required: true,
+            required: false,
         },
         trackedTask: {
             type: Object,
-            required: true,
+            required: false,
         },
     },
     data() {

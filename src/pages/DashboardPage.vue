@@ -17,7 +17,9 @@
             />
         </div>
         <div class="row-widget-container">
-            <MonthGraph/>
+            <MonthGraph
+                :graphData="this.graphData"
+            />
         </div>
         <br>
         <br>
@@ -33,14 +35,15 @@ import MonthGraph from "@/components/dashboard/MonthGraph.vue";
 import CurrentTaskWidget from "@/components/dashboard/CurrentTaskWidget.vue";
 import axiosAgregator from "@/server/axiosAgregator.js";
 import router from "@/router/router.js";
+
 export default {
-    created () {
+    mounted () {
         let projectId = localStorage.getItem("currentProjectId");
         axiosAgregator.sendGet("/api/dashboard/"+projectId).then((response) => {
-            console.log(response.data);
             this.todayTime = response.data.todayTime;
             this.countTasks = response.data.countTasks;
             this.currentTask = response.data.currentTask;
+            this.graphData = response.data.graph;
         })
     },
     data() {
@@ -64,7 +67,7 @@ export default {
                     },
                 },
             },
-            graph: []
+            graphData: []
         };
     },
     methods: {
