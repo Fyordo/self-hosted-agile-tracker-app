@@ -1,18 +1,18 @@
 <template>
-    <Tracker/>
-    <TrackerTable/>
+  <Tracker />
+  <TrackerTable />
 </template>
 
 <script>
-import Tracker from '@/components/tracker/Tracker.vue';
-import TrackerTable from '@/components/tracker/TrackerTable.vue';
+import Tracker from "@/components/tracker/Tracker.vue";
+import TrackerTable from "@/components/tracker/TrackerTable.vue";
 
 export default {
-    components: {
-        Tracker, TrackerTable
-    }
-}
+  components: {
+    Tracker,
+    TrackerTable,
+  },
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

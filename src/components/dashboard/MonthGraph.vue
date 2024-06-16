@@ -1,54 +1,60 @@
 <template>
-  <Bar
-    :options="this.chartOptions"
-    :data="this.chartData"
-  />
+  <Bar :options="this.chartOptions" :data="this.chartData" />
 </template>
-  
-<script>
-import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
-ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
+<script>
+import { Bar } from "vue-chartjs";
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+} from "chart.js";
+
+ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale);
 
 export default {
   watch: {
     graphData: {
-      handler(){
+      handler() {
         this.evalGraph();
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   methods: {
-    evalGraph(){
+    evalGraph() {
       let labels = [];
       let data = [];
-      for (let i = 0; i < this.graphData.length; i++){
+      for (let i = 0; i < this.graphData.length; i++) {
         let graphElem = this.graphData[i];
         labels.push(graphElem.date);
-        data.push(graphElem.hours + (graphElem.minutes / 60) + (graphElem.seconds / 3600));
+        data.push(
+          graphElem.hours + graphElem.minutes / 60 + graphElem.seconds / 3600
+        );
       }
       this.chartData = {
-          labels: labels,
-          datasets: [
-            {
-                data: data,
-                backgroundColor: '#05386b',
-                borderColor: '#05386b',
-            }
-        ]
+        labels: labels,
+        datasets: [
+          {
+            data: data,
+            backgroundColor: "#05386b",
+            borderColor: "#05386b",
+          },
+        ],
       };
-    }
+    },
   },
   mounted() {
     this.evalGraph();
   },
   props: {
-      graphData: Array,
+    graphData: Array,
   },
   components: {
-    Bar
+    Bar,
   },
   data() {
     return {
@@ -56,21 +62,20 @@ export default {
         labels: [],
         datasets: [
           {
-              data: [],
-              backgroundColor: '#05386b',
-              borderColor: '#05386b',
-          }
-      ]
-    },
+            data: [],
+            backgroundColor: "#05386b",
+            borderColor: "#05386b",
+          },
+        ],
+      },
       chartOptions: {
-        responsive: true
-      }
-    }
-  }
-}
+        responsive: true,
+      },
+    };
+  },
+};
 </script>
-  
+
 <style scoped>
 /* Add any styles you need for the component */
 </style>
-  
