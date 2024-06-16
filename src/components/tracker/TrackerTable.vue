@@ -13,6 +13,7 @@
                 <div class="entry-rectangle" :style="calculateRectangleStyle(entry)">
                     <div class="entry-title">{{ entry.task.title }}</div>
                     <div class="entry-description">{{ entry.description }}</div>
+                    <div class="entry-time">{{ calculateEntryTime(entry) }}</div>
                 </div>
                 </div>
             </div>
@@ -63,6 +64,19 @@ import axiosAgregator from "@/server/axiosAgregator.js";
           return "color: #5cdb95";
         }
       },
+      calculateEntryTime(entry){
+        let diffInMilliseconds = entry.timeEnd - entry.timeStart;
+
+        // Преобразование миллисекунд в секунды, минуты и часы
+        const diffInSeconds = Math.floor(diffInMilliseconds / 1000);
+        const diffInMinutes = Math.floor(diffInSeconds / 60);
+        const diffInHours = Math.floor(diffInMinutes / 60);
+
+        const seconds = diffInSeconds % 60;
+        const minutes = diffInMinutes % 60;
+        const hours = diffInHours;
+        return `${hours}h ${minutes}m ${seconds}s`;
+      },
       initializeDays() {
 
         axiosAgregator.sendGet("/api/time-entry").then((response) => {
@@ -70,9 +84,10 @@ import axiosAgregator from "@/server/axiosAgregator.js";
           const timeEntriesAll = entriesArray.map((elem) => {
             return {
               timeStart: new Date(elem.timeStart),
-              timeEnd: new Date(elem.timeEnd),
+              timeEnd: elem.timeEnd != null ? new Date(elem.timeEnd) : new Date(),
               description: elem.description,
               task: elem.task,
+              current: elem.timeEnd == null
             };
           });
 
@@ -106,11 +121,17 @@ import axiosAgregator from "@/server/axiosAgregator.js";
         const startHour = entry.timeStart.getHours();
         const endHour = entry.timeEnd.getHours();
         const height = (endHour - startHour) * 60; // высота в минутах
-  
-        return {
+
+        let style = {
           top: `${(startHour) * 60}px`, // начальное положение относительно 8 утра
           height: `${height}px`,
         };
+        if (entry.current){
+          style.background = '#5cdb95';
+          style.color = 'black';
+        }
+  
+        return style;
       },
       calculateTotalHours(entries) {
         return entries.reduce((total, entry) => {
@@ -150,9 +171,9 @@ import axiosAgregator from "@/server/axiosAgregator.js";
   }
   
   .entry-rectangle {
-    background: #5cdb95;
+    background: #04213e;
     border: 0;
-    color: black;
+    color: white;
     padding: 5px;
     border-radius: 5px;
     position: relative;
@@ -173,6 +194,10 @@ import axiosAgregator from "@/server/axiosAgregator.js";
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .entry-time{
+
   }
   
   </style>

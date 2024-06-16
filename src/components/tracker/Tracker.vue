@@ -8,7 +8,7 @@
             <div class="ticket-title">
                 <UISelect
                 @selected="this.taskSelected($event)"
-                :options="taskOptions"
+                :options="this.taskOptions"
                 />
             </div>
         </div>
@@ -43,6 +43,7 @@ export default {
     created () {
         axiosAgregator.sendGet("/api/task?my=true").then((response) => {
             let responseData = response.data;
+            console.log(responseData);
             this.taskOptions = responseData.data.map((elem) => {
                 return {
                     value: elem.id,
