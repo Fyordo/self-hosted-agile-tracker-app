@@ -1,29 +1,19 @@
 # self-hosted-agile-tracker-app
 
-This template should help get you started developing with Vue 3 in Vite.
+### About
 
-## Recommended IDE Setup
+This is a web application that integrates the functionalities of a Kanban board and time tracking in a single, convenient solution. It can be installed on your local server and customized to meet your specific needs.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Project Setup
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+1. Install all dependensies
 
 ```sh
-npm install
+npm i
 ```
 
-### Compile and Hot-Reload for Development
+2. Run local environment
 
 ```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
 ```
