@@ -1,22 +1,13 @@
 <template>
     <div class="current-task">
-        <div
-            class="current-task-title"
-            @click="toTaskPage(this.trackedTask.task.id)"
-        >
+        <div class="current-task-title" @click="toTaskPage(this.trackedTask.task.id)">
             <b>Current task: <i>{{ this.trackedTask?.task?.title ?? " - " }}</i></b>
         </div>
         <div class="current-task-info">
-            <div
-                class="current-task-project"
-                @click="toProjectPage(this.project.id)"
-            >
+            <div class="current-task-project" @click="toProjectPage(this.project.id)">
                 Project: {{ this.project?.title ?? ' - ' }}
             </div>
-            <div
-                class="current-task-info-separator"
-                @click="toTrackerPage"
-            />
+            <div class="current-task-info-separator" @click="toTrackerPage" />
             <div class="current-task-time" @click="toTrackerPage">
                 {{ getTrackedTimeAsString }}
             </div>
@@ -29,7 +20,7 @@ import router from "@/router/router.js";
 export default {
     watch: {
         trackedTask: {
-            handler(){
+            handler() {
                 this.convertDataToTrackedTime();
             },
             deep: true
@@ -70,7 +61,7 @@ export default {
             router.push("/tracker");
         },
         convertDataToTrackedTime() {
-            if (this.trackedTask === null){
+            if (this.trackedTask === null) {
                 this.trackedTime = {
                     hours: 0,
                     minutes: 0,
@@ -99,7 +90,7 @@ export default {
         },
         enableTimer() {
             setInterval(() => {
-                if (this.trackedTask === null){
+                if (this.trackedTask === null) {
                     return;
                 }
                 this.trackedTime.seconds++;
