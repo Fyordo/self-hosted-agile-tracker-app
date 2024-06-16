@@ -18,7 +18,7 @@
         </div>
         <div class="row-widget-container">
             <MonthGraph
-                :graphData="this.graphData"
+                :graphData="this.graph"
             />
         </div>
         <br>
@@ -39,20 +39,29 @@ import router from "@/router/router.js";
 export default {
     mounted () {
         let projectId = localStorage.getItem("currentProjectId");
-        axiosAgregator.sendGet("/api/dashboard/"+projectId).then((response) => {
+        axiosAgregator.sendGet("/api/dashboard/"+projectId)
+        .then((response) => {
+            console.log(response.data);
+            this.currentTask = response.data.currentTask;
+            this.graph = response.data.graph;
             this.todayTime = response.data.todayTime;
             this.countTasks = response.data.countTasks;
-            this.currentTask = response.data.currentTask;
-            this.graphData = response.data.graph;
         })
     },
     data() {
+        let graph = [];
+        for (let i = 1; i <= 16; i++){
+            graph.push({hours: Math.random(0, 4) * 7, minutes: Math.random(0, 4) * 60, seconds: Math.random() * 60, date: i+'.05.2024'})
+        }
+        for (let i = 17; i <= 30; i++){
+            graph.push({hours:0, minutes: 0, seconds: 0, date: i+'.05.2024'})
+        }
         return {
             todayTime: {
                 hours: 0,
                 minutes: 0,
                 seconds: 0,
-            },
+            }, 
             countTasks: 0,
             currentTask: {
                 project: {
@@ -60,14 +69,14 @@ export default {
                     title: "Loading...",
                 },
                 trackedTask: {
-                    timeStart: "2024-01-01T00:00:00",
+                    timeStart: null,
                     task: {
                         id: 1,
                         title: "Loading...",
                     },
                 },
             },
-            graphData: []
+            graph: graph
         };
     },
     methods: {

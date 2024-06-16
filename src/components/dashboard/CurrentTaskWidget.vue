@@ -4,21 +4,21 @@
             class="current-task-title"
             @click="toTaskPage(this.trackedTask.task.id)"
         >
-            <b>{{ this.trackedTask.task.title }}</b>
+            <b>Current task: <i>{{ this.trackedTask?.task?.title ?? " - " }}</i></b>
         </div>
         <div class="current-task-info">
             <div
                 class="current-task-project"
                 @click="toProjectPage(this.project.id)"
             >
-                Project: {{ this.project.title }}
+                Project: {{ this.project?.title ?? ' - ' }}
             </div>
             <div
                 class="current-task-info-separator"
                 @click="toTrackerPage"
             />
             <div class="current-task-time" @click="toTrackerPage">
-                {{ this.getTrackedTimeAsString() }}
+                {{ getTrackedTimeAsString }}
             </div>
         </div>
     </div>
@@ -27,10 +27,37 @@
 <script>
 import router from "@/router/router.js";
 export default {
+    watch: {
+        trackedTask: {
+            handler(){
+                this.convertDataToTrackedTime();
+            },
+            deep: true
+        }
+    },
     mounted() {
         this.convertDataToTrackedTime();
-        this.getTrackedTimeAsString();
         this.enableTimer();
+    },
+    computed: {
+        getTrackedTimeAsString() {
+            var formattedHours =
+                this.trackedTime.hours < 10
+                    ? "0" + this.trackedTime.hours
+                    : this.trackedTime.hours;
+            var formattedMinutes =
+                this.trackedTime.minutes < 10
+                    ? "0" + this.trackedTime.minutes
+                    : this.trackedTime.minutes;
+            var formattedSeconds =
+                this.trackedTime.seconds < 10
+                    ? "0" + this.trackedTime.seconds
+                    : this.trackedTime.seconds;
+
+            return (
+                formattedHours + ":" + formattedMinutes + ":" + formattedSeconds
+            );
+        }
     },
     methods: {
         toProjectPage: function (projectId) {
@@ -49,6 +76,7 @@ export default {
                     minutes: 0,
                     seconds: 0,
                 };
+                return;
             }
             var startTime = new Date(this.trackedTask.timeStart);
             var endTime = new Date();
@@ -69,27 +97,11 @@ export default {
                 seconds: seconds,
             };
         },
-        getTrackedTimeAsString() {
-            var formattedHours =
-                this.trackedTime.hours < 10
-                    ? "0" + this.trackedTime.hours
-                    : this.trackedTime.hours;
-            var formattedMinutes =
-                this.trackedTime.minutes < 10
-                    ? "0" + this.trackedTime.minutes
-                    : this.trackedTime.minutes;
-            var formattedSeconds =
-                this.trackedTime.seconds < 10
-                    ? "0" + this.trackedTime.seconds
-                    : this.trackedTime.seconds;
-
-            return (
-                formattedHours + ":" + formattedMinutes + ":" + formattedSeconds
-            );
-        },
         enableTimer() {
             setInterval(() => {
-                this.getTrackedTimeAsString();
+                if (this.trackedTask === null){
+                    return;
+                }
                 this.trackedTime.seconds++;
                 if (this.trackedTime.seconds === 60) {
                     this.trackedTime.seconds = 0;

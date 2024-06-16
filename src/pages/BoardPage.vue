@@ -50,7 +50,6 @@ export default {
                             rej(error);
                         })
                     }).then((tasksOfColumn) => {
-                        console.log(tasksOfColumn);
                         this.columns[i].tasks = tasksOfColumn;
                     })
                 }

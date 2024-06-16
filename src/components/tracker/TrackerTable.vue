@@ -100,7 +100,6 @@ import axiosAgregator from "@/server/axiosAgregator.js";
             const timeEntries = timeEntriesAll.filter((elem) => {
               return (new Date(elem.timeStart)).getDate() == date.getDate();
             });
-            console.log(timeEntries)
             const totalHours = this.calculateTotalHours(timeEntries);
             const today = date.getDay() === new Date().getDay();
             this.days.push({ date: this.formatDate(date), dayName, timeEntries, totalHours, today });
@@ -117,14 +116,21 @@ import axiosAgregator from "@/server/axiosAgregator.js";
         return date.toLocaleDateString('en-EN', options);
       },
       calculateRectangleStyle(entry) {
-        // Пример логики: просто для иллюстрации
         const startHour = entry.timeStart.getHours();
+        const startMinutes = entry.timeStart.getMinutes();
         const endHour = entry.timeEnd.getHours();
-        const height = (endHour - startHour) * 60; // высота в минутах
+        const endMinutes = entry.timeEnd.getMinutes();
+        console.log(startHour, endHour);
+        let diffInMilliseconds = entry.timeEnd - entry.timeStart;
+        let diffInMinutes = diffInMilliseconds / 1000 / 60;
+        let top = ((startHour) * 60 + startMinutes) / 2;
+        let bot = top + (diffInMinutes / 2);
+        const height = (diffInMilliseconds) / (1000 * 60); // высота в минутах
+        console.log(entry.task.id, height, diffInMilliseconds)
 
         let style = {
-          top: `${(startHour) * 60}px`, // начальное положение относительно 8 утра
-          height: `${height}px`,
+          top: `${top}px`,
+          height: `${bot - top}px`,
         };
         if (entry.current){
           style.background = '#5cdb95';
